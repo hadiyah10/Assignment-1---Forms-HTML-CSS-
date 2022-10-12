@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback form</title>   
+
+    <style>
+    body
+    {
+   background-image: url(https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif) 
+    } 
+
+    *
+    {
+        box-sizing: border-box;
+    }
+
+    h1
+    {
+        text-align: center;
+        color: white;
+    }
+
+    .container
+    {
+    position: absolute;
+    border-radius: 50px;
+    border : 2px solid white;
+    padding: 20px; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    background-color: transparent;
+    height: 99%;
+    }   
+
+    label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+    font-size: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:white;
+    }
+
+    
+    input[type=text], select, textarea
+    {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+    }
+
+    #submit
+    {
+    background-color:bisque;
+    padding: 12px 20px;
+    border: 1px solid black;
+    border-radius: 50px;
+    width: 100%; 
+    margin-top: 2%;
+    color: black;
+    } 
+    
+    .black-text, .ratings
+    {
+        color: white ;
+    }
+    
+    </style>
+</head>
+<body>
+    <div class ="container">
+        <h1>Feedback Form</h1>    
+        <form>
+            <div>
+                <div>
+                    <label for="name">Name: </label>
+                </div>
+                <div>
+                    <input type="text" id="name" placeholder="Enter name..">
+                </div>
+            </div>
+
+            <div>
+                <div>
+                   <label for="email">Email: </label>
+                </div>
+                <div>
+                   <input type="text" id="email" placeholder="Enter email..">
+                </div>
+            </div>
+
+
+            <div>
+                <div>
+                   <label for="department">Department</label>
+                </div>
+                <select id="department" name="department">
+                    <option value="Product and Technology" >Product and Technology</option>
+                    <option value="Customer Support" >Customer Support</option>
+                    <option value="Human Resource">Human Resource</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            
+            <div>
+                <fieldset>
+                    <legend id="title50" class="desc">
+                        <label for="ratings">Select a rating of 1-5 for your experience at Ceridian so far</label>
+                    </legend>
+                    <div>
+                        <div class="ratings">
+                            <input type="radio" name="rating" value="1"/> 1
+                            <input type="radio" name="rating" value="2"/> 2
+                            <input type="radio" name="rating" value="3"/> 3
+                            <input type="radio" name="rating" value="4"/> 4
+                            <input type="radio" name="rating" value="5"/> 5 
+                        </div>     
+                  </div>
+                </fieldset>
+            </div>
+           
+            <div>
+                <fieldset>
+                    <legend id="title50" class="desc">
+                        <label for="improvement">Select suggestions to improve the experience for incoming batches</label>
+                    </legend>
+                    <div class="black-text">
+                        <input type="checkbox" name="favorite1" value="labs" /> More labs/assignments
+                        <input type="checkbox" name="favorite2" value="self learning" /> More self learning sessions
+                        <input type="checkbox" name="favorite3" value="food" /> More food ( specially pizza)
+                        <input type="checkbox" name="favorite4" value="more complex" /> More complex training sessions
+                        <input type="checkbox" name="favorite5" value="less comlex" /> Less complex training sessions
+                    </div>
+                </fieldset>
+            </div> 
+
+            <div>
+                <div>
+                    <label for="Comments/Suggestions">Subject </label>
+                </div>
+                <div>
+                    <textarea id="subject" name="subject" placeholder="Add any comments or suggestions..."></textarea>
+                </div>
+            </div>
+        
+            <input type="submit" id="submit" value="SUBMIT">
+
+        </form>       
+    </div>
+    
+</body>
+</html>
